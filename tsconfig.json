@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "ES2018",
+    "lib": ["ES2018"],
+    // "strict": true,
+    // "noImplicitAny": true,
+    "noImplicitAny": false,
+    "strict": false,
+    "types": ["node", "@wdio/globals/types", "jest"], //"chai", "mocha"
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "outDir": "./dist",
+    "rootDir": "./src"
+  },
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
+}

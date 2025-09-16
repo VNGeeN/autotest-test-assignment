@@ -7,6 +7,7 @@ describe('GitHub Login Tests', () => {
       config.users.valid.username,
       config.users.valid.password
     );
+    expect(await browser.getUrl()).toContain('github.com');
   });
 
   it('TST-6: неуспешный вход с валидным логином и невалидным паролем', async () => {
@@ -21,6 +22,7 @@ describe('GitHub Login Tests', () => {
       config.users.valid.email,
       config.users.valid.password
     );
+    expect(await browser.getUrl()).toContain('github.com');
   });
 
   it('TST-7: неуспешный вход с помощью верной почты и неверного пароля ', async () => {

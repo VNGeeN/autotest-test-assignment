@@ -68,7 +68,7 @@ describe('GitHub API Issues', () => {
         createdIssueNumber = response.data.number;
     });
 
-    test('NEGATIVE: should return error when creating issue without title (422 Unprocessable Entity)', async () => {
+    it('NEGATIVE: should return error when creating issue without title (422 Unprocessable Entity)', async () => {
         try {
             await apiClient.createIssue(config.testData.emptyIssueTitle);
             expect(true).toBe(false); // Это заставит тест упасть
@@ -81,7 +81,7 @@ describe('GitHub API Issues', () => {
         }
     });
 
-    test('NEGATIVE: should return error with invalid authentication (401 Unauthorized)', async () => {
+    it('NEGATIVE: should return error with invalid authentication (401 Unauthorized)', async () => {
         // Вместо мокирования axios, создадим отдельный экземпляр apiClient с неверным токеном
         const invalidApiClient = {
             createIssue: async (title: string, body?: string) => {
@@ -108,7 +108,7 @@ describe('GitHub API Issues', () => {
         }
     });
 
-    test('NEGATIVE: should return error when repository does not exist (404 Not Found)', async () => {
+    it('NEGATIVE: should return error when repository does not exist (404 Not Found)', async () => {
         try {
             // Пытаемся создать issue в несуществующем репозитории
             const response = await axios.post(

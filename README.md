@@ -1,1 +1,9 @@
-# autotest-test-assignment
+# Autotest Test Assignment
+
+Репозиторий для автоматизированного тестирования с использованием WebdriverIO.
+
+## Установка
+
+Для установки зависимостей выполните команду:
+```bash
+npm install

@@ -11,7 +11,6 @@ class LogoutPage extends BasePage {
 
     async open() {
         await super.open('https://github.com/logout');
-        await browser.pause(2000);
         await this.waitForPageLoaded();
     }
 

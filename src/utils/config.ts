@@ -15,7 +15,13 @@ export const config = {
     login: 'https://github.com/login',
     home: 'https://github.com/',
     password_reset: 'https://github.com/password_reset',
-    logout: 'https://github.com/logout'
+    logout: 'https://github.com/logout',
+    create_account: 'https://github.com/signup',
+    terms: 'https://docs.github.com/site-policy/github-terms/github-terms-of-service',
+    privacy: 'https://docs.github.com/site-policy/privacy-policies/github-privacy-statement',
+    docs: 'https://docs.github.com/',
+    support: 'https://support.github.com/',
+    request: 'https://support.github.com/request/landing'
   },
   api: {
     baseUrl: 'https://api.github.com',
@@ -27,6 +33,9 @@ export const config = {
     issueTitle: 'Test Issue Title',
     issueBody: 'Test Issue Body',
     emptyIssueTitle: '',
-    longIssueTitle: 'A'.repeat(300) // Создаем очень длинный заголовок
+    longIssueTitle: 'A'.repeat(300),
+    sqlInjection: "' OR '1'='1'; --",
+    xssPayload: "<script>alert('XSS')</script>",
+    malformedEmails: ['userexample.com', 'user@', 'user@example']
   },
 };
